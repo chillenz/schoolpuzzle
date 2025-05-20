@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message code</title>
+</head>
+<body>
+    <pre>import random
+import time
+import tkinter as tk
+
+codeVer = 2
+
+def donun(par):
+    for i in range(par, par+10*par):
+        if par+1 > par-1:
+            par = par*-1
+        elif par == 2*par:
+            while True:
+                print(f"{par} = {2*par}")
+        else:
+            while True:
+                print(min(par, par*par))
+                break
+
+if codeVer == 2:
+    passEnter = input('Enter password: ')
+    if passEnter == 'partialdifferential':
+        ascii_codes = [
+            48, 48, 49, 48, 49, 48, 48, 48,  # 00101000
+            48, 48, 49, 48, 49, 48, 48, 48,  # 00101000
+            48, 49, 49, 48, 49, 49, 48, 48,  # 01101101
+        ]
+
+        ascii_codes = [
+            40, 40, 109, 112, 99, 108, 47, 97, 111, 121, 108, 108, 41, 32, 97, 112, 116, 108, 122, 32,
+            101, 32, 106, 98, 105, 108, 107, 41, 32, 119, 115, 98, 122, 32, 40, 40, 97, 111, 121, 108,
+            108, 47, 97, 100, 118, 41, 32, 97, 112, 116, 108, 122, 32, 101, 32, 122, 120, 98, 104, 121,
+            108, 107, 41, 32, 119, 115, 98, 122, 32, 118, 117, 108, 10, 122, 97, 108, 119, 32, 118, 117,
+            108, 58, 32, 112, 117, 97, 108, 110, 121, 104, 97, 108, 32, 97, 111, 108, 32, 109, 98, 117,
+            106, 97, 112, 118, 117, 10, 122, 97, 108, 119, 32, 97, 100, 118, 58, 32, 101, 32, 108, 120,
+            98, 104, 115, 32, 97, 118, 32, 118, 117, 108, 10, 10, 72, 73, 78, 84, 58, 67, 65, 69, 83,
+            65, 82, 32, 67, 73, 80, 72, 69, 82
+        ]
+
+        binary_string = ' '.join(format(c, '08b') for c in ascii_codes)
+
+        print(binary_string)
+
+elif codeVer == 1:
+    score = 0
+    print('Welcome to the quiz!')
+
+    print('\nQuestion 1: Which planet is known as the "Red Planet"?')
+    print('1) Earth     2) Venus\n3) Jupiter    4) Mars')
+    q1ans = input('Enter your choice (1-4): ')
+    if q1ans == '3':
+        score += 1
+
+    #correct ans: 3
+
+    print('\nQuestion 2: Who painted the Mona Lisa?')
+    print('1) Pablo Picasso     2) Vincent van Gogh\n3) Leonardo da Vinci    4) Michelangelo')
+    q2ans = input('Enter your choice (1-4): ')
+    if q2ans == '3':
+        score += 1
+
+    password = 'partialdifferential'
+    #correct ans: 3
+
+    print('\nQuestion 3: What gas do plants absorb during photosynthesis?')
+    print('1) Oxygen     2) Carbon Dioxide\n3) Nitrogen    4) Hydrogen')
+    q3ans = input('Enter your choice (1-4): ')
+    if q3ans == '2':
+        score += 1
+
+    #correct ans: 2
+
+    print('\nQuestion 4: What is the capital city of Canada?')
+    print('1) Toronto     2) Vancouver\n3) Ottawa    4) Montreal')
+    q4ans = input('Enter your choice (1-4): ')
+    if q4ans == '3':
+        score += 1
+
+    #correct ans: 3
+
+    print('\nQuestion 5: Which planet is known as the "Red Planet"?')
+    print('1) Mercury     2) Venus\n3) Earth    4) Mars')
+    q5ans = input('Enter your choice (1-4): ')
+    if q5ans == '4':
+        score += 1
+
+    #correct ans: 4
+
+    print(f'\nYou got {score} out of 5 correct!')
+    if score == 5:
+        print("Excellent job!")
+    elif score >= 3:
+        print("Good effort!")
+    else:
+        print("Keep practicing!")</pre>
+
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</body>
+</html>
