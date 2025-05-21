@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>message code</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <pre>import random
+    <pre id="code">import random
 import time
 import tkinter as tk
 
@@ -100,11 +101,14 @@ elif codeVer == 1:
     else:
         print("Keep practicing!")</pre>
 
-    <style>
-        body{
-            background-color: black;
-            color: white;
-        }
-    </style>
+    <button id="start">Click the green circle as quickly as possible!</button>
+
+    <div id="red"></div>
+
+    <div id="gameover">Too slow or Clicked red</div>
+
+    <div id="greencircle"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
