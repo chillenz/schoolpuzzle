@@ -62,6 +62,7 @@ function checkTime() {
         gameover.style.display = 'none';
         greencircle.style.display = 'none';
         code.style.display = 'flex';
+        document.body.style.overflow = 'scroll'
     } else {
         // Player was not fast enough
         lostByTime = true;
